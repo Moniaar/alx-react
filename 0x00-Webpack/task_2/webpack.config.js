@@ -9,17 +9,6 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'public')
     },
-<<<<<<< HEAD
-  mode: 'production'
-    rules: [
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.(png|jpg|jpeg|gif)$/i,
-          {
-=======
     module: {
         rules: [
             {
