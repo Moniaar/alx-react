@@ -1,6 +1,5 @@
 #count {
-  position: absolute;
-  right: 0;
+  display: inline-block;
   font-weight: bold;
 }
 
@@ -8,5 +7,5 @@
   width: 200px;
   height: 200px;
   background: url('../assets/holberton-logo.jpg') no-repeat center center;
-  background-size: cover;
+  background-size: 200px 200px;
 }
