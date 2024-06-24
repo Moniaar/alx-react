@@ -17,11 +17,17 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-      },
-    ],
-  },
-  performance: {
-    maxAssetSize: 512000,
-  },
+          {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                use: [
+                    'file-loader',
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            bypassOnDebug: true,
+                            disable: true,
+                        },
+                    },
+                ],
+          },
 };
