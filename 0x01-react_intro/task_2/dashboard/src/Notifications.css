@@ -1,0 +1,23 @@
+.Notifications {
+	padding: 2rem;
+	border: 3px solid black;
+}
+
+[data-priority|='default'] {
+    color: blue;
+}
+
+[data-priority|='urgent'] {
+    color: red;
+}
+
+
+.Notifications button {
+    background-color: transparent;
+    border: none;
+}
+
+.Notifications button img {
+    width: 15px;
+    height: 15px;
+}
