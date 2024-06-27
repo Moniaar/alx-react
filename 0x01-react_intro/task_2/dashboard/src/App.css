@@ -24,12 +24,24 @@
 .App-body {
   padding: 3rem;
   height: 47vh;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
 }
 
+.App-body p {
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.App-body label {
+  font-weight: 500;
+}
 
 /* App-footer */
 .App-footer {
   font-style: italic;
+  font-weight: 500;
   border-top: 3px solid var(--primary-color);
   display: flex;
   justify-content: center;

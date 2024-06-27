@@ -1,6 +1,7 @@
 .Notifications {
 	padding: 2rem;
-	border: 3px solid black;
+	border: 3px solid #e0354b;
+	border-style: dashed;
 }
 
 [data-priority|='default'] {
