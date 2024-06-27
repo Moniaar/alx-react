@@ -1,15 +1,22 @@
-.App-logo {
-  height: 180px; /* Adjust the height of the logo as needed */
-  margin-right: 20px;
-  pointer-events: none;
-  font-weight: bold;
+.App {
+  font-size: 16px;
+  --primary-color: #de3e54;
+}
+
+.App-header img {
+  width: 150px;
+  height: 150px;
+}
+
+.App-header h1 {
+  color: var(--primary-color);
 }
 
 .App-header {
   display: flex;
   align-items: center;
   background-color: white;
-  padding: 15px;
+  border-bottom: 2px solid var(--primary-color);
   color: #de3e54;
 }
 
@@ -22,9 +29,7 @@
   background-color: white;
   text-size: 15px;
   border-top: 2px solid #de3e54;
-  text-align: center;
-  padding: 10px;
+   display: flex;
+  justify-content: center;
   font-style: italic; /* Make the footer text italic */
-  position: relative;
-  bottom: 0;
 }
