@@ -1,4 +1,3 @@
----
 # Redux Concepts and Data Flow
 
 In this section, we explored how Redux can enhance the maintainability of apps by providing a central place for global app state. We also covered core Redux concepts like dispatching action objects and using reducer functions to return new state values.
@@ -34,18 +33,7 @@ In this part, we discussed the foundational aspects of Redux and began building 
 9. **State Design**: Describing the necessary state values and their structure for the app.
 10. **Actions and Reducers**: Detailed explanation of designing actions and writing reducers for state management.
 
-Enter a number to expand
-
-## Shortcuts
-[D]: Create a diagram  
-[A]: Transform into article  
-[E]: Expand summary  
-[Q]: Extract quotes  
-[T]: Create a table  
-[C]: Generate flashcards  
-[Z]: Create Quiz  
-[R]: Research  
-[F]: Write FAQs  
-
-## Translate
-Enter any language to translate: es, fr, de, zh, etc.
+Referencs links:
+![Reducers](https://intranet.alxswe.com/rltoken/SzgQcaVZ6qtF1ccU-S2DiA)
+![selectors](https://intranet.alxswe.com/rltoken/m3ctiAA74QV6YYqZ8YBZTQ)
+![writting tests](https://intranet.alxswe.com/rltoken/E5mFy6WxHnMfIwxYhy2gzw)
