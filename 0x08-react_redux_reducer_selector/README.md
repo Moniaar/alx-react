@@ -5,7 +5,7 @@ In this section, we explored how Redux can enhance the maintainability of apps b
 ---
 
 ## Conclusion
-In this part, we discussed the foundational aspects of Redux and began building a small example application to illustrate how these concepts work in practice. Although the tutorial uses older Redux logic patterns, it serves to explain the principles and concepts behind Redux. For modern applications, it's recommended to use Redux Toolkit. The tutorial provided insights into project setup, initial project exploration, defining requirements, state values, actions, and reducers.
+In this part, we discussed the foundational aspects of Redux and began building a small example application to illustrate how these concepts work in practice. Although the tutorial uses older Redux logic patterns, it serves to explain the principles and concepts behind Redux. For modern applications, it's recommended to use Redux Toolkit.
 
 ---
 
