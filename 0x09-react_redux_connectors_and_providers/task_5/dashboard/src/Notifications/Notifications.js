@@ -2,11 +2,17 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchNotifications } from '../actions/notificationActionCreators'; // Import the fetchNotifications action creator
+import { fetchNotifications } from '../actions/notificationActionCreators';
+import PropTypes from 'prop-types';
 
 class Notifications extends Component {
+  static propTypes = {
+    listNotifications: PropTypes.array.isRequired,
+    fetchNotifications: PropTypes.func.isRequired,
+  };
+
   componentDidMount() {
-    this.props.fetchNotifications(); // Call fetchNotifications when the component mounts
+    this.props.fetchNotifications();
   }
 
   render() {
@@ -16,8 +22,8 @@ class Notifications extends Component {
       <div>
         <h2>Notifications</h2>
         <ul>
-          {listNotifications.map((notification) => (
-            <li key={notification.id}>{notification.value}</li>
+          {listNotifications.valueSeq().map(notification => (
+            <li key={notification.get('id')}>{notification.get('value')}</li>
           ))}
         </ul>
       </div>
@@ -25,14 +31,12 @@ class Notifications extends Component {
   }
 }
 
-// Map state to props
 const mapStateToProps = (state) => ({
-  listNotifications: state.get('notifications').toJS(), // Convert Immutable Map to JS
+  listNotifications: state.get('notifications'),
 });
 
-// Map dispatch to props
 const mapDispatchToProps = (dispatch) => ({
-  fetchNotifications: () => dispatch(fetchNotifications()), // Map fetchNotifications action creator to props
+  fetchNotifications: () => dispatch(fetchNotifications()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Notifications);
