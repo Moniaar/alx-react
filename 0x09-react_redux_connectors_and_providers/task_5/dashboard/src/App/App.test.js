@@ -1,57 +1,20 @@
-// App.js
+// App.test.js
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { logout } from './actions/userActionCreators';  // Adjust import based on your setup
-import { fetchNotifications } from './actions/notificationActionCreators';
-import './App.css';  // Import your CSS file if needed
+import React from 'react';
+import { shallow } from 'enzyme';
+import App from './App';
+import { Map } from 'immutable';
 
-class App extends Component {
-  static propTypes = {
-    isLoggedIn: PropTypes.bool,
-    displayDrawer: PropTypes.bool,
-    login: PropTypes.func,
-    logout: PropTypes.func,
-    fetchNotifications: PropTypes.func,
-  };
+describe('App Component', () => {
+  it('should render without crashing', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.exists()).toBe(true);
+  });
 
-  static defaultProps = {
-    isLoggedIn: false,
-    displayDrawer: false,
-    login: () => {},
-    logout: () => {},
-    fetchNotifications: () => {},
-  };
-
-  componentDidMount() {
-    this.props.fetchNotifications();  // Fetch notifications when the component mounts
-  }
-
-  render() {
-    const { isLoggedIn, displayDrawer, logout } = this.props;
-
-    return (
-      <div className="App">
-        <header>
-          <h1>My App</h1>
-          {isLoggedIn && <button onClick={logout}>Logout</button>}
-        </header>
-        {displayDrawer && <div className="drawer">Drawer Content</div>}
-      </div>
-    );
-  }
-}
-
-// Map state and actions to props
-const mapStateToProps = (state) => ({
-  isLoggedIn: state.getIn(['ui', 'isUserLoggedIn']),
-  displayDrawer: state.getIn(['ui', 'isNotificationDrawerVisible']),
+  it('should call fetchNotifications on mount', () => {
+    const fetchNotificationsMock = jest.fn();
+    shallow(<App fetchNotifications={fetchNotificationsMock} />);
+    expect(fetchNotificationsMock).toHaveBeenCalled();
+  });
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  logout: () => dispatch(logout()),
-  fetchNotifications: () => dispatch(fetchNotifications()),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
