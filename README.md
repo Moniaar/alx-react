@@ -8,3 +8,4 @@ React copies this structure into the machine of the element you're working with 
 ### How to create a new react app?
 1. cd into your desktop or anywhere you wanna install your app with
 2. npx create-react-app your app name
+When you want to import a css file inside your React.js file you use the attribute className just like how you use class in HTML, then you pass it the class name you used in your CSS file that you want to specify.
